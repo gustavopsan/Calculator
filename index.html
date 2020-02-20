@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator App</title>
+</head>
+<body>
+<div class="todo">
+    <div class="title">A Simple Calculator</div>
+<div class="tela">
+    <div class="tela1"><input type="text" class="history"/></div>
+    <div class="tela2"><input type="text" class="operation"/></div>
+</div>
+
+    <div class="key-top">
+        <input type="button" class="button" value="7">
+        <input type="button" class="button" value="8">
+        <input type="button" class="button" value="9">
+        <input type="button" class="button" value="/">
+    </div>
+    <div class="key-mid1">
+        <input type="button" class="button" value="4">
+        <input type="button" class="button" value="5">
+        <input type="button" class="button" value="6">
+        <input type="button" class="button" value="*">
+    </div>
+    <div class="key-mid2">
+        <input type="button" class="button" value="1">
+        <input type="button" class="button" value="2">
+        <input type="button" class="button" value="3">
+        <input type="button" class="button" value="-">
+    </div>
+    <div class="key-botton">
+        <input type="button" class="button" value="c">
+        <input type="button" class="button" value="0">
+        <input type="button" class="button" value="=">
+        <input type="button" class="button" value="+">
+    </div>
+</div>
+
+</body>
+<style>
+    body {
+        background: linear-gradient(to right, #09203F, #537895);
+    }
+    .todo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+    .title {
+        margin-bottom: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 20px;
+    }
+    .tela {
+        background-color: #01142F;
+    }
+    .button {
+        height: 70px;
+        width: 57px;
+        border: none;
+        margin-bottom: 2px;
+        font-size: 25px;
+        color: mintcream;
+        background-color: slategrey;
+    }
+    .tela2 {
+        margin-bottom: 5px;
+    }
+    .operation {
+        font-size: 30px;
+        height: 35px;
+        width: 236px;
+        background-color: #01142F;
+        border: none;
+        color: lightcyan;
+    }
+    input.history {
+        width: 100px;
+        margin-left: 136px;
+        background-color: #01142F;
+        border: none;
+        color: lightcyan;
+
+    }
+</style>
+</html>
