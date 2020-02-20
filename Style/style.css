@@ -1,0 +1,64 @@
+body {
+    /*background: linear-gradient(to right, #09203F, #537895);*/
+    background: #90C7DE;
+}
+.todo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.tela {
+    background-color: #2D3436;
+}
+.equal {
+    height: 127px;
+    width: 122px;
+    border: none;
+    margin-bottom: 2px;
+    font-size: 60px;
+    font-family: Fira Code;
+    background-color: #4C57EF;
+    color: white;
+}
+.operator {
+    height: 127px;
+    width: 122px;
+    border: none;
+    margin-bottom: 2px;
+    font-size: 50px;
+    font-family: 'Segoe UI Historic';
+    background-color: #4C88EF;
+    color: white;
+}
+.button {
+    height: 127px;
+    width: 122px;
+    border: none;
+    font-size: 60px;
+    font-family: Fira Code;
+}
+.tela2 {
+    margin-bottom: 5px;
+}
+.operation {
+    font-size: 80px;
+    width: 490px;
+    background-color: #2D3436;
+    border: none;
+    font-family: Fira Code;
+    color: lightcyan;
+    direction: rtl;
+}
+input.history {
+    font-size: 30px;
+    width: 480px;
+    margin-left: 10px;
+    background-color: #2D3436;
+    border: none;
+    font-family: Fira Code;
+    color: #A4A4A4;
+    direction: rtl;
+}
