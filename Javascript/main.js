@@ -19,7 +19,6 @@ $(document).ready(function () {
     });
 
 
-    //Calculando a soma dos números
     $('.j_sum').click(function () {
 
         Verifier = 1;
