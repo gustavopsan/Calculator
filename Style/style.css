@@ -58,11 +58,20 @@ body {
 input.history {
     font-size: 30px;
     width: 400px;
-    margin-left: 10px;
     margin-top: 5px;
     background-color: #2D3436;
     border: none;
     font-family: Fira Code;
     color: #A4A4A4;
     direction: rtl;
+}
+
+#operator {
+    width: 30px;
+    border: none;
+    font-size: 30px;
+    margin-left: 10px;
+    font-family: Fira Code;
+    background-color: #2D3436;
+    color: #A4A4A4;
 }
