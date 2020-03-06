@@ -12,7 +12,8 @@ $(document).ready(function () {
 
     $('.j_clear').click(function () {
         $('.tela1').val('');
-        $('.tela2').val('');
+        $('.tela2').val(null);
+        console.log($('.tela2').val());
         num1 = 0;
         num2 = 0;
         result = 0;
@@ -24,23 +25,27 @@ $(document).ready(function () {
 
         Verifier = 1;
         num1 = $('.tela2').val();
-        $('.tela1').val('+' + num1);
+        $('.tela1').val(num1 + '+');
         $('.tela2').val('');
     })
 
     $('.j_sub').click(function () {
-
-        Verifier = 2;
-        num1 = $('.tela2').val();
-        $('.tela1').val('-' + num1);
-        $('.tela2').val('');
+        if ($('#tela2').val(null)) {
+            $('#tela2').val('-');
+        } else {
+            Verifier = 2;
+            num1 = $('.tela2').val();
+            $('.tela1').val(num1 + '-');
+            $('.tela2').val(''); 
+        }
+         
     })
 
     $('.j_prod').click(function () {
 
         Verifier = 3;
         num1 = $('.tela2').val();
-        $('.tela1').val('×' + num1);
+        $('.tela1').val(num1 + '×');
         $('.tela2').val('');
     })
 
@@ -48,7 +53,7 @@ $(document).ready(function () {
 
         Verifier = 4;
         num1 = $('.tela2').val();
-        $('.tela1').val('÷' + num1);
+        $('.tela1').val(num1 + '÷');
         $('.tela2').val('');
     })
 
@@ -82,7 +87,7 @@ $(document).ready(function () {
                 console.log('multiplication = true')
                 num2 = $('.tela2').val();
                 result = parseInt(num1) * parseInt(num2);
-                $('.tela1').val(num2 + '×' + num1);
+                $('.tela1').val(num1 + '×' + num2);
                 $('.tela2').val(parseFloat(result.toFixed(2)));
                 num1 = 0;
                 num2 = 0;
@@ -93,7 +98,7 @@ $(document).ready(function () {
                 console.log('division = true')
                 num2 = $('.tela2').val();
                 result = parseInt(num1) / parseInt(num2);
-                $('.tela1').val(num2 + '÷' + num1);
+                $('.tela1').val(num1 + '÷' + num2);
                 $('.tela2').val(parseFloat(result.toFixed(2)));
                 num1 = 0;
                 num2 = 0;

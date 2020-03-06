@@ -53,7 +53,7 @@ body {
     border: none;
     font-family: Fira Code;
     color: lightcyan;
-    direction: rtl;
+    text-align: right;
 }
 input.history {
     font-size: 30px;
@@ -63,7 +63,7 @@ input.history {
     border: none;
     font-family: Fira Code;
     color: #A4A4A4;
-    direction: rtl;
+    text-align: right;
 }
 
 #operator {
