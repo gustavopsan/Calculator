@@ -10,18 +10,15 @@ $(document).ready(function () {
         $('.tela2').val($('.tela2').val() + (this).value);
     });
 
-    $('.j_clear').click(function () {
+    $('#j_clear').click(function () {
         $('.tela1').val('');
-        $('.tela2').val(null);
-        console.log($('.tela2').val());
+        $('.tela2').val('');
         num1 = 0;
         num2 = 0;
         result = 0;
     });
 
-
-    //Calculando a soma dos números
-    $('.j_sum').click(function () {
+    $('#j_sum').click(function () {
 
         Verifier = 1;
         num1 = $('.tela2').val();
@@ -29,8 +26,8 @@ $(document).ready(function () {
         $('.tela2').val('');
     })
 
-    $('.j_sub').click(function () {
-        if ($('#tela2').val(null)) {
+    $('#j_sub').click(function () {
+        if ($('#tela2').val() == '') {
             $('#tela2').val('-');
         } else {
             Verifier = 2;
@@ -41,7 +38,7 @@ $(document).ready(function () {
          
     })
 
-    $('.j_prod').click(function () {
+    $('#j_prod').click(function () {
 
         Verifier = 3;
         num1 = $('.tela2').val();
@@ -49,7 +46,7 @@ $(document).ready(function () {
         $('.tela2').val('');
     })
 
-    $('.j_div').click(function () {
+    $('#j_div').click(function () {
 
         Verifier = 4;
         num1 = $('.tela2').val();
@@ -57,13 +54,13 @@ $(document).ready(function () {
         $('.tela2').val('');
     })
 
-    $('.equal').click( function () {
+    $('#j_equal').click( function () {
 
         switch (Verifier) {
             case 1:
                 console.log('sum = true');
                 num2 = $('.tela2').val();
-                result = parseInt(num1) + parseInt(num2);
+                result = parseFloat(num1) + parseFloat(num2);
                 $('.tela1').val(num1 + '+' + num2);
                 $('.tela2').val(parseFloat(result.toFixed(2)));
                 num1 = 0;
@@ -86,7 +83,7 @@ $(document).ready(function () {
             case 3:
                 console.log('multiplication = true')
                 num2 = $('.tela2').val();
-                result = parseInt(num1) * parseInt(num2);
+                result = parseFloat(num1) * parseFloat(num2);
                 $('.tela1').val(num1 + '×' + num2);
                 $('.tela2').val(parseFloat(result.toFixed(2)));
                 num1 = 0;
@@ -97,7 +94,7 @@ $(document).ready(function () {
             case 4:
                 console.log('division = true')
                 num2 = $('.tela2').val();
-                result = parseInt(num1) / parseInt(num2);
+                result = parseFloat(num1) / parseFloat(num2);
                 $('.tela1').val(num1 + '÷' + num2);
                 $('.tela2').val(parseFloat(result.toFixed(2)));
                 num1 = 0;
