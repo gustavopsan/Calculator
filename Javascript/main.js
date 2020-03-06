@@ -26,7 +26,7 @@ $(document).ready(function () {
         $('.tela1').val(num1 + '+');
         $('.tela2').val('');
     })
-    
+
     $('#j_sub').click(function () {
         if ($('#tela2').val() == '') {
             $('#tela2').val('-');
@@ -85,7 +85,6 @@ $(document).ready(function () {
                 console.log('multiplication = true')
                 num2 = $('.tela2').val();
                 result = parseFloat(num1) * parseFloat(num2);
-
                 $('.tela1').val(num1 + '×' + num2);
                 $('.tela2').val(parseFloat(result.toFixed(2)));
                 num1 = 0;
