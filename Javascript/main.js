@@ -22,7 +22,7 @@ $(document).ready(function () {
     });
 
     $('#j_sum').click(function () {
-        visor.css("left", 0);
+        visor.css("left", 0); //movendo o visor inferior para coincidir com a existência/não-existência do operador na tela
         Verifier = 1;
         num1 = visor.val();
         operator.text('+');
@@ -60,13 +60,17 @@ $(document).ready(function () {
     })
 
     $('#j_equal').click( function () {
-
+        
+        //colocando uma 'automação' na posição do visor inferior para coincidir com a existência/não-existência do operador na tela
         visor.css("left", 40);
         switch (Verifier) {
             case 1:
                 console.log('sum = true');
                 num2 = visor.val();
                 result = parseFloat(num1) + parseFloat(num2);
+
+                //Tratando o histórico com uma estrutura condicional
+                
                 if (history.val() == '') {
                     history.val(num1 + '+' + num2);
                 } else {
