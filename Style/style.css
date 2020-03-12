@@ -7,7 +7,8 @@ body {
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    background-color: rgba(45, 52, 54, 0.281);
 }
 
 .tela {
@@ -47,8 +48,10 @@ body {
 }
 
 .operation {
+    position: relative;
     font-size: 80px;
-    width: 400px;
+    width: 360px;
+    left: 40px;
     background-color: #2D3436;
     border: none;
     font-family: Fira Code;
@@ -73,5 +76,14 @@ input.history {
     margin-left: 10px;
     font-family: Fira Code;
     background-color: #2D3436;
+    color: #A4A4A4;
+}
+
+#op {
+    display: contents;
+    position: absolute;
+    font-size: 60px;
+    margin-left: 20px;
+    font-family: Fira Code;
     color: #A4A4A4;
 }
