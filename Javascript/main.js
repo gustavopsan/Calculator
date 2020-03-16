@@ -9,12 +9,23 @@ $(document).ready(function () {
     console.log("ready");
 
     $('.j_number').click(function () { 
-        visor.val(visor.val() + (this).value);
+        if (visor.val() == '0') {
+            visor.val('');
+            visor.val(visor.val() + (this).value);
+        } else {
+            visor.val(visor.val() + (this).value);
+        }
+        
     });
+
+    $('#j_dot').click(function () {
+        visor.val(visor.val() + (this).value);
+    })
+
 
     $('#j_clear').click(function () {
         history.val('');
-        visor.val('');
+        visor.val('0');
         operator.text('');
         num1 = 0;
         num2 = 0;
