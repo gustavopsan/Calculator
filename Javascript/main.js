@@ -42,7 +42,9 @@ $(document).ready(function () {
 
     $('#j_sub').click(function () {
 
-        if (visor.val() == '') {
+        if (visor.val() == '0') {
+            visor.val('-');
+        } else if (visor.val() == '') {
             visor.val('-');
         } else {
             visor.css("left", 0);
