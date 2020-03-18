@@ -44,6 +44,7 @@ $(document).ready(function () {
 
     $('#j_clear').click(function () {
         history.val('');
+        visor.css("left", 40);
         visor.val('0');
         operator.text('');
         num1 = 0;
