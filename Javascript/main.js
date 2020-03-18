@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     let Verifier = 0;
+    let dotVerifier = false;
     let num1, num2, result = 0;
     var history = $('#tela1');
     var visor = $('#tela2');
@@ -19,9 +20,27 @@ $(document).ready(function () {
     });
 
     $('#j_dot').click(function () {
-        visor.val(visor.val() + (this).value);
+        switch (dotVerifier) {
+            case false:
+                dotVerifier = true;
+                visor.val(visor.val() + (this).value);
+                break;
+            case true:
+                break
+            default:
+                break;
+        }
     })
 
+    $('#j_del').click(function () {
+        if (visor.val() == '0' ) {
+        } else {
+            visor.val(visor.val().replace(/.$/, ''));
+            if (visor.val() == ''){
+                visor.val('0');
+            }
+        }
+    })
 
     $('#j_clear').click(function () {
         history.val('');
@@ -30,6 +49,7 @@ $(document).ready(function () {
         num1 = 0;
         num2 = 0;
         result = 0;
+        dotVerifier = false;
     });
 
     $('#j_sum').click(function () {
@@ -78,7 +98,6 @@ $(document).ready(function () {
         visor.css("left", 40);
         switch (Verifier) {
             case 1:
-                console.log('sum = true');
                 num2 = visor.val();
                 result = parseFloat(num1) + parseFloat(num2);
 
@@ -90,31 +109,19 @@ $(document).ready(function () {
                     history.val(history.val() + '+' + num2);
                 }
                 visor.val(parseFloat(result.toFixed(2)));
-                operator.text('');
-                num1 = 0;
-                num2 = 0;
-                result = 0;
-                Verifier = 0;
                 break;
         
             case 2:
-                console.log('subtract = true');
                 num2 = visor.val();
-                result = num1 - num2;
+                result = parseFloat(num1) - parseFloat(num2);
                 if (history.val() == '') {
                     history.val(num1 + '-' + num2);
                 } else {
                     history.val(history.val() + '-' + num2);
                 }
-                visor.val(parseFloat(result.toFixed(2)));
-                operator.text('');
-                num1 = 0;
-                num2 = 0;
-                result = 0;
-                Verifier = 0;
+                visor.val(parseFloat(result.toFixed(2)));;
                 break;
             case 3:
-                console.log('multiplication = true')
                 num2 = visor.val();
                 result = parseFloat(num1) * parseFloat(num2);
                 if (history.val() == '') {
@@ -123,14 +130,8 @@ $(document).ready(function () {
                     history.val(history.val() + '×' + num2);
                 }
                 visor.val(parseFloat(result.toFixed(2)));
-                operator.text('');
-                num1 = 0;
-                num2 = 0;
-                result = 0;
-                Verifier = 0;
                 break;
             case 4:
-                console.log('division = true')
                 num2 = visor.val();
                 result = parseFloat(num1) / parseFloat(num2);
                 if (history.val() == '') {
@@ -139,12 +140,18 @@ $(document).ready(function () {
                     history.val(history.val() + '÷' + num2);
                 }
                 visor.val(parseFloat(result.toFixed(2)));
-                operator.text('');
-                num1 = 0;
-                num2 = 0;
-                result = 0;
-                Verifier = 0;
                 break;
+        }
+
+        operator.text('');
+        num1 = 0;
+        num2 = 0;
+        result = 0;
+        Verifier = 0;
+        console.log(num1, num2, result, Verifier);
+
+        if (visor.val().indexOf('.')>=0) {
+            dotVerifier = true;
         }
         
     })
