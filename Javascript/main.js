@@ -55,6 +55,7 @@ $(document).ready(function () {
     $('#j_sum').click(function () {
         visor.css("left", 0); //movendo o visor inferior para coincidir com a existência/não-existência do operador na tela
         Verifier = 1;
+        dotVerifier = false;
         num1 = visor.val();
         operator.text('+');
         visor.val('');
@@ -69,6 +70,7 @@ $(document).ready(function () {
         } else {
             visor.css("left", 0);
             Verifier = 2;
+            dotVerifier = false;
             num1 = visor.val();
             operator.text('-');
             visor.val(''); 
@@ -79,6 +81,7 @@ $(document).ready(function () {
     $('#j_prod').click(function () {
         visor.css("left", 0);
         Verifier = 3;
+        dotVerifier = false;
         num1 = visor.val();
         operator.text('×');
         visor.val('');
@@ -87,6 +90,7 @@ $(document).ready(function () {
     $('#j_div').click(function () {
         visor.css("left", 0);
         Verifier = 4;
+        dotVerifier = false;
         num1 = visor.val();
         operator.text('÷');
         visor.val('');
